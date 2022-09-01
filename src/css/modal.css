@@ -1,0 +1,78 @@
+.modal {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-grey-2);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal-signup {
+    background-color: var(--color-grey-5);
+    height: 312px;
+    width: 288px;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.signup {
+    color: var(--color-primary);
+    font-size: var(--font-size-2);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .5rem 0;
+    gap: 1rem;
+}
+.modal-body > p {
+    font-size: var(--font-size-3);
+}
+
+.send-email, #modalBtn {
+    padding: 5px;
+    font-size: var(--font-size-3);
+    width: 100%;
+    border: 2px solid var(--color-grey-3);
+    border-radius: 8px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.send-email:hover, #modalBtn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-grey-6);
+    cursor: pointer;
+}
+
+.modal .modal-signup{
+    animation: show-modal 1s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes show-modal {
+    0%{
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .modal-signup {
+        width: 346px;
+    }   
+}
