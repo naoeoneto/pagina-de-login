@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/assets/white-music-note-png-10.png" type="image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/globalStyles.css">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Musique - Login</title>
 </head>
 <body>
-    <div class="login">
+    <main class="login">
         <div class="login-info">
             <figure>
                 <img src="src/assets/logo-musique.png" alt="Logo Musique">
@@ -18,9 +23,32 @@
             </figure>
         </div>
         <div class="login-inputs">
-            
+            <h2>Login</h2>
+            <form>
+                <label for="">E-mail:</label>
+                <input type="text" placeholder="Digite o seu e-mail">
+                <label for="">Senha:</label>
+                <input type="text" placeholder="Digite a sua senha">
+                <span class="login-forget">Esqueceu sua senha? 
+                    <span id="open-modal">Clique aqui!</span>
+                </span>
+            </form>
+            <button class="login-btn">Entrar</button>
         </div>
-    </div>
-    <script src="src/js/script.js"></script>
+
+        <div class="modal">
+            <div class="modal-signup hidden">
+                <div class="modal-header">
+                    <h2 class="signup">Recuperar Senha</h2>
+                    <button data-control-modal="close-modal" id="modalBtn">X</button>
+                </div>
+                <div class="modal-body">Para recuperar sua senha, vamos precisar do seu e-mail cadastrado, ok?
+                    <input type="text" placeholder="Insira aqui o seu e-mail">
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="src/js/modal.js"></script>
 </body>
 </html>
