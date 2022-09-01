@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="/globalStyles.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/modal.css">
     <title>Musique - Login</title>
 </head>
 <body>
@@ -36,15 +37,16 @@
             <button class="login-btn">Entrar</button>
         </div>
 
-        <div class="modal">
-            <div class="modal-signup hidden">
+        <div class="modal hidden">
+            <div class="modal-signup">
                 <div class="modal-header">
                     <h2 class="signup">Recuperar Senha</h2>
-                    <button data-control-modal="close-modal" id="modalBtn">X</button>
                 </div>
-                <div class="modal-body">Para recuperar sua senha, vamos precisar do seu e-mail cadastrado, ok?
+                <div class="modal-body">
+                    <p> Para recuperar sua senha, vamos precisar do seu e-mail cadastrado, ok?</p>
                     <input type="text" placeholder="Insira aqui o seu e-mail">
-                    <button>Enviar</button>
+                    <button class="send-email">Enviar</buttonc>
+                    <button data-control-modal="close-modal" id="modalBtn">Voltar</button>
                 </div>
             </div>
         </div>

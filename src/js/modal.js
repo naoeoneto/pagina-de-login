@@ -1,7 +1,7 @@
 class Modal {
     static openModal(){
         let forgetPassword = document.getElementById("open-modal")
-        let modal = document.querySelector(".modal-signup")
+        let modal = document.querySelector(".modal")
 
         forgetPassword.addEventListener("click", () => {
             modal.classList.toggle("hidden")
@@ -10,7 +10,7 @@ class Modal {
 
     static closeModal(){
         let modalBtn = document.getElementById("modalBtn")
-        let modal = document.querySelector(".modal-signup")
+        let modal = document.querySelector(".modal")
         modalBtn.addEventListener("click", event => {
             event.preventDefault()
             modal.classList.toggle("hidden")
